@@ -1,0 +1,1090 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdfs1="rdfs:"
+     xmlns:schema="http://schema.org/"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://schema.org/about -->
+
+    <AnnotationProperty rdf:about="http://schema.org/about">
+        <dcterms:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/1670"/>
+        <schema:category>issue-1670</schema:category>
+        <schema:domainIncludes rdf:resource="http://schema.org/CommunicateAction"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+        <schema:inverseOf rdf:resource="http://schema.org/subjectOf"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Thing"/>
+        <rdfs:comment>The subject matter of the content.</rdfs:comment>
+        <rdfs:label>about</rdfs:label>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/additionalType -->
+
+    <AnnotationProperty rdf:about="http://schema.org/additionalType">
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:comment>An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the &apos;typeof&apos; attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.</rdfs:comment>
+        <rdfs:label>additionalType</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/category -->
+
+    <AnnotationProperty rdf:about="http://schema.org/category"/>
+    
+
+
+    <!-- http://schema.org/contentLocation -->
+
+    <AnnotationProperty rdf:about="http://schema.org/contentLocation">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Place"/>
+        <rdfs:comment>The location depicted or described in the content. For example, the location in a photograph or painting.</rdfs:comment>
+        <rdfs:label>contentLocation</rdfs:label>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/description -->
+
+    <AnnotationProperty rdf:about="http://schema.org/description">
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>A description of the item.</rdfs:comment>
+        <rdfs:label>description</rdfs:label>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/disambiguatingDescription -->
+
+    <AnnotationProperty rdf:about="http://schema.org/disambiguatingDescription">
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</rdfs:comment>
+        <rdfs:label>disambiguatingDescription</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://schema.org/description"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/domainIncludes -->
+
+    <AnnotationProperty rdf:about="http://schema.org/domainIncludes"/>
+    
+
+
+    <!-- http://schema.org/funder -->
+
+    <AnnotationProperty rdf:about="http://schema.org/funder">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/MonetaryGrant"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>A person or organization that supports (sponsors) something through some kind of financial contribution.</rdfs:comment>
+        <rdfs:label>funder</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://schema.org/sponsor"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/identifier -->
+
+    <AnnotationProperty rdf:about="http://schema.org/identifier">
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/PropertyValue"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:comment>The identifier property represents any kind of identifier for any kind of &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/Thing&quot;&gt;Thing&lt;/a&gt;, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See &lt;a href=&quot;/docs/datamodel.html#identifierBg&quot;&gt;background notes&lt;/a&gt; for more details.</rdfs:comment>
+        <rdfs:label>identifier</rdfs:label>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/inverseOf -->
+
+    <AnnotationProperty rdf:about="http://schema.org/inverseOf"/>
+    
+
+
+    <!-- http://schema.org/isPartOf -->
+
+    <AnnotationProperty rdf:about="http://schema.org/isPartOf">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:inverseOf rdf:resource="http://schema.org/hasPart"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.</rdfs:comment>
+        <rdfs:label>isPartOf</rdfs:label>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/isbn -->
+
+    <AnnotationProperty rdf:about="http://schema.org/isbn">
+        <schema:domainIncludes rdf:resource="http://schema.org/Book"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>The ISBN of the book.</rdfs:comment>
+        <rdfs:label>isbn</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://schema.org/identifier"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/mainEntity -->
+
+    <AnnotationProperty rdf:about="http://schema.org/mainEntity">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:inverseOf rdf:resource="http://schema.org/mainEntityOfPage"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Thing"/>
+        <rdfs:comment>Indicates the primary entity described in some page or other CreativeWork.</rdfs:comment>
+        <rdfs:label>mainEntity</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://schema.org/about"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/name -->
+
+    <AnnotationProperty rdf:about="http://schema.org/name">
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>The name of the item.</rdfs:comment>
+        <rdfs:label>name</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="rdfs:label"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/rangeIncludes -->
+
+    <AnnotationProperty rdf:about="http://schema.org/rangeIncludes"/>
+    
+
+
+    <!-- http://schema.org/spatialCoverage -->
+
+    <AnnotationProperty rdf:about="http://schema.org/spatialCoverage">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Place"/>
+        <rdfs:comment>The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of
+      contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates
+      areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York.</rdfs:comment>
+        <rdfs:label>spatialCoverage</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://schema.org/contentLocation"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/sponsor -->
+
+    <AnnotationProperty rdf:about="http://schema.org/sponsor">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Grant"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/MedicalStudy"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.</rdfs:comment>
+        <rdfs:label>sponsor</rdfs:label>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/supersededBy -->
+
+    <AnnotationProperty rdf:about="http://schema.org/supersededBy"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#type -->
+
+    <AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    
+
+
+    <!-- rdfs:label -->
+
+    <AnnotationProperty rdf:about="rdfs:label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/Audiobook -->
+
+    <Class rdf:about="http://schema.org/Audiobook">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Book"/>
+    </Class>
+    
+
+
+    <!-- http://schema.org/Book -->
+
+    <Class rdf:about="http://schema.org/Book">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>A book.</rdfs:comment>
+        <rdfs:label>Book</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://schema.org/CreativeWork -->
+
+    <Class rdf:about="http://schema.org/CreativeWork">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
+        <dcterms:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews"/>
+        <rdfs:comment>The most generic kind of creative work, including books, movies, photographs, software programs, etc.</rdfs:comment>
+        <rdfs:label>CreativeWork</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://schema.org/Thing -->
+
+    <Class rdf:about="http://schema.org/Thing">
+        <rdfs:comment>The most generic type of item.</rdfs:comment>
+        <rdfs:label>Thing</rdfs:label>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://schema.org/abridged">
+        <schema:isPartOf rdf:resource="http://bib.schema.org"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Book"/>
+        <rdfs:label xml:lang="en">abridged</rdfs:label>
+        <rdfs:comment>Indicates whether the book is an abridged edition.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Boolean"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/accessMode">
+        <rdfs:comment>The human sensory perceptual system or cognitive faculty through which a person may process or perceive information. Expected values include: auditory, tactile, textual, visual, colorDependent, chartOnVisual, chemOnVisual, diagramOnVisual, mathOnVisual, musicOnVisual, textOnVisual.</rdfs:comment>
+        <dcterms:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/1100"/>
+        <schema:category>issue-1110</schema:category>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:label>accessMode</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/accessModeSufficient">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/ItemList"/>
+        <schema:category>issue-1110</schema:category>
+        <dcterms:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/1100"/>
+        <rdfs:label>accessModeSufficient</rdfs:label>
+        <rdfs:comment>A list of single or combined accessModes that are sufficient to understand all the intellectual content of a resource. Expected values include:  auditory, tactile, textual, visual.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/accessibilityAPI">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>Indicates that the resource is compatible with the referenced accessibility API (&lt;a href=&quot;http://www.w3.org/wiki/WebSchemas/Accessibility&quot;&gt;WebSchemas wiki lists possible values&lt;/a&gt;).</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:label>accessibilityAPI</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/accessibilityControl">
+        <rdfs:label>accessibilityControl</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>Identifies input methods that are sufficient to fully control the described resource (&lt;a href=&quot;http://www.w3.org/wiki/WebSchemas/Accessibility&quot;&gt;WebSchemas wiki lists possible values&lt;/a&gt;).</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/accessibilityFeature">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:label>accessibilityFeature</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility (&lt;a href=&quot;http://www.w3.org/wiki/WebSchemas/Accessibility&quot;&gt;WebSchemas wiki lists possible values&lt;/a&gt;).</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/accessibilityHazard">
+        <rdfs:comment>A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3 (&lt;a href=&quot;http://www.w3.org/wiki/WebSchemas/Accessibility&quot;&gt;WebSchemas wiki lists possible values&lt;/a&gt;).</rdfs:comment>
+        <rdfs:label>accessibilityHazard</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/accessibilitySummary">
+        <rdfs:label>accessibilitySummary</rdfs:label>
+        <rdfs:comment>A human-readable summary of specific accessibility features or deficiencies, consistent with the other accessibility metadata but expressing subtleties such as &quot;short descriptions are present but long descriptions will be needed for non-visual users&quot; or &quot;short descriptions are present and no long descriptions are needed.&quot;</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <schema:category>issue-1110</schema:category>
+        <dcterms:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/1100"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/accountablePerson">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>Specifies the Person that is legally accountable for the CreativeWork.</rdfs:comment>
+        <rdfs:label>accountablePerson</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/aggregateRating">
+        <rdfs:comment>The overall rating, based on a collection of reviews or ratings, of the item.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/Brand"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Service"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Place"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+        <rdfs:label>aggregateRating</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/AggregateRating"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Product"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Offer"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/alternateName">
+        <rdfs:comment>An alias for the item.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <rdfs:label>alternateName</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/alternativeHeadline">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>A secondary title of the CreativeWork.</rdfs:comment>
+        <rdfs:label>alternativeHeadline</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/associatedMedia">
+        <rdfs:comment>A media object that encodes this CreativeWork. This property is a synonym for encoding.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/MediaObject"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:label>associatedMedia</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/audience">
+        <rdfs:label>audience</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Audience"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Service"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Product"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/PlayAction"/>
+        <rdfs:comment>An intended audience, i.e. a group for whom something was created.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/LodgingBusiness"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/audio">
+        <rdfs:label>audio</rdfs:label>
+        <rdfs:comment>An embedded audio object.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/AudioObject"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Clip"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/author">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+        <rdfs:label>author</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/Rating"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/award">
+        <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Product"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Service"/>
+        <rdfs:label>award</rdfs:label>
+        <rdfs:comment>An award won by or for this item.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/awards">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Product"/>
+        <rdfs:comment>Awards won by or for this item.</rdfs:comment>
+        <schema:supersededBy rdf:resource="http://schema.org/award"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:label>awards</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/bookEdition">
+        <rdfs:comment>The edition of the book.</rdfs:comment>
+        <rdfs:label>bookEdition</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/Book"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/bookFormat">
+        <schema:rangeIncludes rdf:resource="http://schema.org/BookFormatType"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Book"/>
+        <rdfs:label>bookFormat</rdfs:label>
+        <rdfs:comment>The format of the book.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/character">
+        <rdfs:comment>Fictional person connected with a creative work.</rdfs:comment>
+        <rdfs:label>character</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/citation">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:label>citation</rdfs:label>
+        <rdfs:comment>A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/comment">
+        <schema:domainIncludes rdf:resource="http://schema.org/RsvpAction"/>
+        <rdfs:label>comment</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Comment"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>Comments, typically from users.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/commentCount">
+        <rdfs:label>commentCount</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Integer"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/conditionsOfAccess">
+        <rdfs:label>conditionsOfAccess</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/ArchiveComponent&quot;&gt;ArchiveComponent&lt;/a&gt; held by an &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/ArchiveOrganization&quot;&gt;ArchiveOrganization&lt;/a&gt;. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.&lt;br/&gt;&lt;br/&gt;
+
+For example &quot;Available by appointment from the Reading Room&quot; or &quot;Accessible only from logged-in accounts &quot;.</rdfs:comment>
+        <schema:isPartOf rdf:resource="http://pending.schema.org"/>
+        <dcterms:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/2173"/>
+        <schema:category>issue-2173</schema:category>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/contentRating">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>Official rating of a piece of content&amp;#x2014;for example,&apos;MPAA PG-13&apos;.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Rating"/>
+        <rdfs:label>contentRating</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/contentReferenceTime">
+        <rdfs:label>contentReferenceTime</rdfs:label>
+        <schema:category>issue-1050</schema:category>
+        <schema:isPartOf rdf:resource="http://pending.schema.org"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/DateTime"/>
+        <dcterms:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/1050"/>
+        <rdfs:comment>The specific time described by a creative work, for works (e.g. articles, video objects etc.) that emphasise a particular moment within an Event.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/contributor">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+        <rdfs:label>contributor</rdfs:label>
+        <rdfs:comment>A secondary contributor to the CreativeWork or Event.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/copyrightHolder">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+        <rdfs:label>copyrightHolder</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>The party holding the legal copyright to the CreativeWork.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/copyrightYear">
+        <rdfs:comment>The year during which the claimed copyright for the CreativeWork was first asserted.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Number"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:label>copyrightYear</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/correction">
+        <schema:rangeIncludes rdf:resource="http://schema.org/CorrectionComment"/>
+        <schema:isPartOf rdf:resource="http://pending.schema.org"/>
+        <schema:category>issue-1688</schema:category>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <schema:category>issue-1950</schema:category>
+        <dcterms:source rdf:resource="https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#TP"/>
+        <dcterms:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/1950"/>
+        <rdfs:comment>Indicates a correction to a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/CreativeWork&quot;&gt;CreativeWork&lt;/a&gt;, either via a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/CorrectionComment&quot;&gt;CorrectionComment&lt;/a&gt;, textually or in another document.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:label>correction</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/creativeWorkStatus">
+        <schema:category>issue-987</schema:category>
+        <schema:isPartOf rdf:resource="http://pending.schema.org"/>
+        <dcterms:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/987"/>
+        <rdfs:label>creativeWorkStatus</rdfs:label>
+        <rdfs:comment>The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/DefinedTerm"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/creator">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:label>creator</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/UserComments"/>
+        <rdfs:comment>The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/dateCreated">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Date"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/DataFeedItem"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/DateTime"/>
+        <rdfs:comment>The date on which the CreativeWork was created or the item was added to a DataFeed.</rdfs:comment>
+        <rdfs:label>dateCreated</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/dateModified">
+        <schema:domainIncludes rdf:resource="http://schema.org/DataFeedItem"/>
+        <rdfs:comment>The date on which the CreativeWork was most recently modified or when the item&apos;s entry was modified within a DataFeed.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/DateTime"/>
+        <rdfs:label>dateModified</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Date"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/datePublished">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Date"/>
+        <rdfs:comment>Date of first broadcast/publication.</rdfs:comment>
+        <rdfs:label>datePublished</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/discussionUrl">
+        <rdfs:label>discussionUrl</rdfs:label>
+        <rdfs:comment>A link to the page containing the comments of the CreativeWork.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/editor">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>Specifies the Person who edited the CreativeWork.</rdfs:comment>
+        <rdfs:label>editor</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/educationalAlignment">
+        <rdfs:comment>An alignment to an established educational framework.</rdfs:comment>
+        <rdfs:label>educationalAlignment</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/AlignmentObject"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/educationalUse">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:label>educationalUse</rdfs:label>
+        <rdfs:comment>The purpose of a work in the context of education; for example, &apos;assignment&apos;, &apos;group work&apos;.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/encoding">
+        <rdfs:label>encoding</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/MediaObject"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>A media object that encodes this CreativeWork. This property is a synonym for associatedMedia.</rdfs:comment>
+        <schema:inverseOf rdf:resource="http://schema.org/encodesCreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/encodingFormat">
+        <rdfs:label>encodingFormat</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/MediaObject"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>Media type typically expressed using a MIME format (see &lt;a href=&quot;http://www.iana.org/assignments/media-types/media-types.xhtml&quot;&gt;IANA site&lt;/a&gt; and &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types&quot;&gt;MDN reference&lt;/a&gt;) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).&lt;br/&gt;&lt;br/&gt;
+
+In cases where a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/CreativeWork&quot;&gt;CreativeWork&lt;/a&gt; has several media type representations, &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/encoding&quot;&gt;encoding&lt;/a&gt; can be used to indicate each &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/MediaObject&quot;&gt;MediaObject&lt;/a&gt; alongside particular &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/encodingFormat&quot;&gt;encodingFormat&lt;/a&gt; information.&lt;br/&gt;&lt;br/&gt;
+
+Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/encodings">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/MediaObject"/>
+        <rdfs:comment>A media object that encodes this CreativeWork.</rdfs:comment>
+        <rdfs:label>encodings</rdfs:label>
+        <schema:supersededBy rdf:resource="http://schema.org/encoding"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/exampleOfWork">
+        <dcterms:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex"/>
+        <rdfs:label>exampleOfWork</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>A creative work that this work is an example/instance/realization/derivation of.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:inverseOf rdf:resource="http://schema.org/workExample"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/expires">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Date"/>
+        <rdfs:comment>Date the content expires and is no longer useful or available. For example a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/VideoObject&quot;&gt;VideoObject&lt;/a&gt; or &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/NewsArticle&quot;&gt;NewsArticle&lt;/a&gt; whose availability or relevance is time-limited, or a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/ClaimReview&quot;&gt;ClaimReview&lt;/a&gt; fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:label>expires</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/fileFormat">
+        <schema:supersededBy rdf:resource="http://schema.org/encodingFormat"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:label>fileFormat</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>Media type, typically MIME format (see &lt;a href=&quot;http://www.iana.org/assignments/media-types/media-types.xhtml&quot;&gt;IANA site&lt;/a&gt;) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, &apos;encoding&apos; can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/genre">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/MusicGroup"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/BroadcastChannel"/>
+        <rdfs:label>genre</rdfs:label>
+        <rdfs:comment>Genre of the creative work, broadcast channel or group.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/hasPart">
+        <dcterms:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:inverseOf rdf:resource="http://schema.org/isPartOf"/>
+        <rdfs:comment>Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:label>hasPart</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/headline">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>Headline of the article.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:label>headline</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/illustrator">
+        <rdfs:label>illustrator</rdfs:label>
+        <rdfs:comment>The illustrator of the book.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/Book"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/image">
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <rdfs:label>image</rdfs:label>
+        <rdfs:comment>An image of the item. This can be a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/URL&quot;&gt;URL&lt;/a&gt; or a fully described &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/ImageObject&quot;&gt;ImageObject&lt;/a&gt;.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/ImageObject"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/inLanguage">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/LinkRole"/>
+        <rdfs:label>inLanguage</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+        <rdfs:comment>The language of the content or performance or used in an action. Please use one of the language codes from the &lt;a href=&quot;http://tools.ietf.org/html/bcp47&quot;&gt;IETF BCP 47 standard&lt;/a&gt;. See also &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/availableLanguage&quot;&gt;availableLanguage&lt;/a&gt;.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Language"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/WriteAction"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CommunicateAction"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/interactionStatistic">
+        <rdfs:comment>The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used.</rdfs:comment>
+        <rdfs:label>interactionStatistic</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/InteractionCounter"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/interactivityType">
+        <rdfs:comment>The predominant mode of learning supported by the learning resource. Acceptable values are &apos;active&apos;, &apos;expositive&apos;, or &apos;mixed&apos;.</rdfs:comment>
+        <rdfs:label>interactivityType</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/isAccessibleForFree">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>A flag to signal that the item, event, or place is accessible for free.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Boolean"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Place"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+        <rdfs:label>isAccessibleForFree</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/PublicationEvent"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/isBasedOn">
+        <rdfs:comment>A resource from which this work is derived or from which it is a modification or adaption.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Product"/>
+        <rdfs:label>isBasedOn</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/isBasedOnUrl">
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:label>isBasedOnUrl</rdfs:label>
+        <rdfs:comment>A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Product"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <schema:supersededBy rdf:resource="http://schema.org/isBasedOn"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/isFamilyFriendly">
+        <rdfs:comment>Indicates whether this content is family friendly.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Boolean"/>
+        <rdfs:label>isFamilyFriendly</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/keywords">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.</rdfs:comment>
+        <rdfs:label>keywords</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/learningResourceType">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>The predominant type or kind characterizing the learning resource. For example, &apos;presentation&apos;, &apos;handout&apos;.</rdfs:comment>
+        <rdfs:label>learningResourceType</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/license">
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:label>license</rdfs:label>
+        <rdfs:comment>A license document that applies to this content, typically indicated by URL.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/locationCreated">
+        <rdfs:label>locationCreated</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Place"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/mainEntityOfPage">
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <schema:inverseOf rdf:resource="http://schema.org/mainEntity"/>
+        <rdfs:comment>Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See &lt;a href=&quot;/docs/datamodel.html#mainEntityBackground&quot;&gt;background notes&lt;/a&gt; for details.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <rdfs:label>mainEntityOfPage</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/material">
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:label>material</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/Product"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Product"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>A material that something is made from, e.g. leather, wool, cotton, paper.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/materialExtent">
+        <schema:isPartOf rdf:resource="http://pending.schema.org"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <dcterms:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/1759"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/QuantitativeValue"/>
+        <rdfs:comment>The quantity of the materials being described or an expression of the physical space they occupy.</rdfs:comment>
+        <rdfs:label xml:lang="en">materialExtent</rdfs:label>
+        <schema:category xml:lang="en">issue-1759</schema:category>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/mentions">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Thing"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.</rdfs:comment>
+        <rdfs:label>mentions</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/numberOfPages">
+        <schema:domainIncludes rdf:resource="http://schema.org/Book"/>
+        <rdfs:label>numberOfPages</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Integer"/>
+        <rdfs:comment>The number of pages in the book.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/offers">
+        <schema:domainIncludes rdf:resource="http://schema.org/AggregateOffer"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Product"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Offer"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:label>offers</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/Trip"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/MenuItem"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Service"/>
+        <rdfs:comment>An offer to provide this item&amp;#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/position">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Integer"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>The position of an item in a series or sequence of items.</rdfs:comment>
+        <rdfs:label>position</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/ListItem"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/potentialAction">
+        <rdfs:comment>Indicates a potential Action, which describes an idealized action in which this thing would play an &apos;object&apos; role.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <rdfs:label>potentialAction</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Action"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/producer">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:label>producer</rdfs:label>
+        <rdfs:comment>The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/provider">
+        <schema:domainIncludes rdf:resource="http://schema.org/Trip"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/ParcelDelivery"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Invoice"/>
+        <rdfs:label>provider</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/Reservation"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Service"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/publication">
+        <rdfs:comment>A publication event associated with the item.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/PublicationEvent"/>
+        <rdfs:label>publication</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/publisher">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+        <rdfs:label>publisher</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>The publisher of the creative work.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/publisherImprint">
+        <rdfs:comment>The publishing division which published the comic.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:category xml:lang="en">Comics</schema:category>
+        <schema:isPartOf rdf:resource="http://bib.schema.org"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+        <rdfs:label xml:lang="en">publisherImprint</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/publishingPrinciples">
+        <rdfs:comment>The publishingPrinciples property indicates (typically via &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/URL&quot;&gt;URL&lt;/a&gt;) a document describing the editorial principles of an &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/Organization&quot;&gt;Organization&lt;/a&gt; (or individual e.g. a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/Person&quot;&gt;Person&lt;/a&gt; writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/CreativeWork&quot;&gt;CreativeWork&lt;/a&gt; (e.g. &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/NewsArticle&quot;&gt;NewsArticle&lt;/a&gt;) the principles are those of the party primarily responsible for the creation of the &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/CreativeWork&quot;&gt;CreativeWork&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/funder&quot;&gt;funder&lt;/a&gt;) can be expressed using schema.org terminology.</rdfs:comment>
+        <rdfs:label>publishingPrinciples</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/recordedAt">
+        <rdfs:label>recordedAt</rdfs:label>
+        <rdfs:comment>The Event where the CreativeWork was recorded. The CreativeWork may capture all or part of the event.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Event"/>
+        <schema:inverseOf rdf:resource="http://schema.org/recordedIn"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/releasedEvent">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>The place and time the release was issued, expressed as a PublicationEvent.</rdfs:comment>
+        <rdfs:label>releasedEvent</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/PublicationEvent"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/review">
+        <rdfs:comment>A review of the item.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Review"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Service"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Product"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Brand"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Place"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+        <rdfs:label>review</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Offer"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/reviews">
+        <schema:supersededBy rdf:resource="http://schema.org/review"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Offer"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Product"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Review"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+        <rdfs:comment>Review of the item.</rdfs:comment>
+        <rdfs:label>reviews</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/Place"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/sameAs">
+        <rdfs:comment>URL of a reference Web page that unambiguously indicates the item&apos;s identity. E.g. the URL of the item&apos;s Wikipedia page, Wikidata entry, or official website.</rdfs:comment>
+        <rdfs:label>sameAs</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/schemaVersion">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using an URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:label>schemaVersion</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/sdDatePublished">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>Indicates the date on which the current structured data was generated / published. Typically used alongside &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/sdPublisher&quot;&gt;sdPublisher&lt;/a&gt;</rdfs:comment>
+        <rdfs:label>sdDatePublished</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Date"/>
+        <schema:isPartOf rdf:resource="http://pending.schema.org"/>
+        <schema:category>issue-1886</schema:category>
+        <dcterms:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/1886"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/sdLicense">
+        <dcterms:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/1886"/>
+        <rdfs:comment>A license document that applies to this structured data, typically indicated by URL.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:category>issue-1886</schema:category>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:isPartOf rdf:resource="http://pending.schema.org"/>
+        <rdfs:label>sdLicense</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/sdPublisher">
+        <schema:category>issue-1886</schema:category>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <dcterms:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/1886"/>
+        <rdfs:comment>Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The
+&lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/sdPublisher&quot;&gt;sdPublisher&lt;/a&gt; property helps make such practices more explicit.</rdfs:comment>
+        <schema:isPartOf rdf:resource="http://pending.schema.org"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+        <rdfs:label>sdPublisher</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/sourceOrganization">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:label>sourceOrganization</rdfs:label>
+        <rdfs:comment>The Organization on whose behalf the creator was working.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/spatial">
+        <rdfs:label>spatial</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Place"/>
+        <rdfs:comment>The &quot;spatial&quot; property can be used in cases when more specific properties
+(e.g. &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/locationCreated&quot;&gt;locationCreated&lt;/a&gt;, &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/spatialCoverage&quot;&gt;spatialCoverage&lt;/a&gt;, &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/contentLocation&quot;&gt;contentLocation&lt;/a&gt;) are not known to be appropriate.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/subjectOf">
+        <schema:rangeIncludes rdf:resource="http://schema.org/Event"/>
+        <rdfs:label>subjectOf</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <schema:category>issue-1670</schema:category>
+        <dcterms:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/1670"/>
+        <schema:inverseOf rdf:resource="http://schema.org/about"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>A CreativeWork or Event about this Thing.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/temporal">
+        <rdfs:comment>The &quot;temporal&quot; property can be used in cases where more specific properties
+(e.g. &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/temporalCoverage&quot;&gt;temporalCoverage&lt;/a&gt;, &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/dateCreated&quot;&gt;dateCreated&lt;/a&gt;, &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/dateModified&quot;&gt;dateModified&lt;/a&gt;, &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/datePublished&quot;&gt;datePublished&lt;/a&gt;) are not known to be appropriate.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:label>temporal</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/DateTime"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/temporalCoverage">
+        <rdfs:comment>The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in &lt;a href=&quot;https://en.wikipedia.org/wiki/ISO_8601#Time_intervals&quot;&gt;ISO 8601 time interval format&lt;/a&gt;. In
+      the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written &quot;2011/2012&quot;). Other forms of content e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage in broader terms - textually or via well-known URL.
+      Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via &quot;1939/1945&quot;.&lt;br/&gt;&lt;br/&gt;
+
+Open-ended date ranges can be written with &quot;..&quot; in place of the end date. For example, &quot;2015-11/..&quot; indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:label>temporalCoverage</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/DateTime"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/text">
+        <rdfs:comment>The textual content of this CreativeWork.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:label>text</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/thumbnailUrl">
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:comment>A thumbnail image relevant to the Thing.</rdfs:comment>
+        <rdfs:label>thumbnailUrl</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/timeRequired">
+        <rdfs:comment>Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. &apos;PT30M&apos;, &apos;PT1H25M&apos;.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Duration"/>
+        <rdfs:label>timeRequired</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/translationOfWork">
+        <rdfs:comment>The work that this work has been translated from. e.g. 物种起源 is a translationOf “On the Origin of Species”</rdfs:comment>
+        <rdfs:label xml:lang="en">translationOfWork</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:isPartOf rdf:resource="http://bib.schema.org"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:inverseOf rdf:resource="http://schema.org/workTranslation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/translator">
+        <rdfs:label>translator</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+        <rdfs:comment>Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/typicalAgeRange">
+        <rdfs:label>typicalAgeRange</rdfs:label>
+        <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>The typical expected age range, e.g. &apos;7-9&apos;, &apos;11-&apos;.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/url">
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <rdfs:comment>URL of the item.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:label>url</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/version">
+        <rdfs:label>version</rdfs:label>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Number"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>The version of the CreativeWork embodied by a specified resource.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/video">
+        <rdfs:label>video</rdfs:label>
+        <rdfs:comment>An embedded video object.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Clip"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/VideoObject"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/workExample">
+        <dcterms:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex"/>
+        <schema:inverseOf rdf:resource="http://schema.org/exampleOfWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:label>workExample</rdfs:label>
+        <rdfs:comment>Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook.</rdfs:comment>
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/workTranslation">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:isPartOf rdf:resource="http://bib.schema.org"/>
+        <rdfs:label xml:lang="en">workTranslation</rdfs:label>
+        <schema:inverseOf rdf:resource="http://schema.org/translationOfWork"/>
+        <rdfs:comment>A work that is a translation of the content of this work. e.g. 西遊記 has an English workTranslation “Journey to the West”,a German workTranslation “Monkeys Pilgerfahrt” and a Vietnamese  translation Tây du ký bình khảo.</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
